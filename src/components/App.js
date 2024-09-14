@@ -3,7 +3,7 @@ import React from "react";
 import './../styles/App.css';
 import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
 import Userdetail from "./Userdetail";
-import UserList from "./Userlist";
+import UserList from "./UserList";
 
 
 const users = [
