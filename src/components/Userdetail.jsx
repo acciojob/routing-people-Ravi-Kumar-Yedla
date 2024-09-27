@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const Userdetail = ({ users }) => {
   const { id } = useParams();
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const foundUser = users.find(u => u.id === parseInt(id));
-    setUser(foundUser);
-  }, [id, users]);
+  const user = users.find(u => u.id === parseInt(id));
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <h2>User not found</h2>;
   }
-
   return (
     <div>
+
       <h1>User Detail</h1>
       <p><strong>Name: </strong>{user.Name}</p>
       <p><strong>Username: </strong>{user.Username}</p>
