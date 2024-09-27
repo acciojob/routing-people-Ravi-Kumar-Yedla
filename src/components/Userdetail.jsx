@@ -10,6 +10,7 @@ const Userdetail = ({ users }) => {
   }
   return (
     <div>
+      
       <h1>User Detail</h1>
       <p><strong>Name:</strong>{user.Name}</p>
       <p><strong>Username:</strong>{user.Username}</p>
